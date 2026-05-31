@@ -415,7 +415,7 @@ export default function ContactPage() {
                 What are the check-in and check-out times?
               </h3>
               <p className="text-gray-600 text-sm md:text-base">
-                Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be arranged upon request.
+                Check-in is from 2:30 PM and check-out is by 11:00 AM. Early check-in or late check-out may be arranged upon request.
               </p>
             </div>
 
@@ -451,7 +451,7 @@ export default function ContactPage() {
                 Can I cancel or modify my booking?
               </h3>
               <p className="text-gray-600 text-sm md:text-base">
-                Yes, cancellations and modifications are allowed up to 48 hours before check-in. Please refer to our cancellation policy for details.
+                Yes, cancellations and modifications are allowed up to 72 hours before check-in. Please refer to our cancellation policy for details.
               </p>
             </div>
           </div>
