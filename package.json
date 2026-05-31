@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cf:preview": "npx wrangler pages dev out",
+    "cf:deploy": "npx wrangler pages deploy out",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
