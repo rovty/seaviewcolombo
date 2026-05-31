@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { attractions, siteConfig } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Location | Sea View Colombo',
+  title: 'Location',
   description: 'Our apartments are perfectly located in Colombo 03, within walking distance of major attractions like Galle Face, shopping malls, temples, and beaches.',
 };
 
@@ -83,7 +83,7 @@ export default function LocationPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Sea View Colombo Location Map"
+                title={`${siteConfig.name} Location Map`}
               />
             </div>
           </div>

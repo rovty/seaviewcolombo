@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://seaviewcolombo.com'),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} | Luxury Sea View Apartments in Colombo`,
     template: `%s | ${siteConfig.name}`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://seaviewcolombo.com',
+    url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Luxury Sea View Apartments in Colombo`,
     description: 'Discover luxury sea view apartments in Colombo. Spacious 2 and 3 bedroom accommodations with rooftop pools, ocean views, modern amenities, and prime Colombo location.',

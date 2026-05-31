@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: ApartmentPageProps): Promise<
   }
 
   return {
-    title: `${apartment.name} | Sea View Colombo`,
+    title: apartment.name,
     description: apartment.description,
     openGraph: {
-      title: `${apartment.name} | Sea View Colombo`,
+      title: `${apartment.name} | ${siteConfig.name}`,
       description: apartment.description,
       images: apartment.images.slice(0, 1),
     },

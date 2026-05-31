@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle } from 'lucide-react';
@@ -8,8 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { apartments, siteConfig } from '@/lib/data';
+import { siteConfig } from '@/lib/data';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -17,8 +16,57 @@ const fadeInUp = {
   transition: { duration: 0.5 }
 };
 
+const WEB3FORMS_ACCESS_KEY = 'f9a82cd9-2963-40a6-b8a4-22221f8f73d4';
+
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSubmitError('');
+    setIsSubmitting(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    if (formData.get('botcheck')) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        form.reset();
+        setIsSubmitted(true);
+        return;
+      }
+
+      setSubmitError(
+        result.body?.message ||
+        result.message ||
+        'Something went wrong while sending your inquiry. Please try again.'
+      );
+    } catch {
+      setSubmitError('Unable to send your inquiry right now. Please try again in a moment or contact us on WhatsApp.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   if (isSubmitted) {
     return (
@@ -206,14 +254,19 @@ export default function ContactPage() {
               </h2>
 
               <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                onSubmit={() => setIsSubmitted(true)}
+                onSubmit={handleSubmit}
                 className="space-y-4 md:space-y-6"
               >
-                <input type="hidden" name="access_key" value="f9a82cd9-2963-40a6-b8a4-22221f8f73d4" />
-                <input type="hidden" name="subject" value="New Booking Inquiry - Sea View Colombo" />
-                <input type="hidden" name="from_name" value="Sea View Colombo Website" />
+                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                <input type="hidden" name="subject" value={`New Booking Inquiry - ${siteConfig.name}`} />
+                <input type="hidden" name="from_name" value={`${siteConfig.name} Website`} />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   <div>
@@ -308,11 +361,18 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-sky-600 hover:bg-sky-700 h-11 md:h-12 text-base md:text-lg"
                 >
-                  Send Inquiry
+                  {isSubmitting ? 'Sending Inquiry...' : 'Send Inquiry'}
                   <Send className="w-4 h-4 ml-2" />
                 </Button>
+
+                {submitError ? (
+                  <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {submitError}
+                  </p>
+                ) : null}
 
                 <p className="text-xs md:text-sm text-gray-500 text-center">
                   By submitting, you agree to our privacy policy. We&apos;ll never share your information.

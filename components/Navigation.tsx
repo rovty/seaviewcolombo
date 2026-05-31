@@ -2,22 +2,33 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Waves } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { navigation, siteConfig } from '@/lib/data';
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isHomePage = pathname === '/';
+  const showTransparentHeader = isHomePage && !isScrolled;
+  const navIsLight = !showTransparentHeader;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   // Close mobile menu on resize
   useEffect(() => {
@@ -36,7 +47,7 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+          navIsLight
             ? 'bg-white/95 backdrop-blur-md shadow-md'
             : 'bg-transparent'
         }`}
@@ -45,10 +56,10 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-14 md:h-16 lg:h-20">
             <Link href="/" className="flex items-center space-x-2 z-50">
               <Waves className={`h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 transition-colors ${
-                isScrolled ? 'text-sky-600' : 'text-white'
+                navIsLight ? 'text-sky-600' : 'text-white'
               }`} />
               <span className={`font-serif text-base md:text-lg lg:text-xl font-semibold transition-colors ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                navIsLight ? 'text-gray-900' : 'text-white'
               }`}>
                 {siteConfig.name}
               </span>
@@ -61,7 +72,7 @@ export default function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={`text-xs lg:text-sm font-medium transition-colors hover:opacity-70 ${
-                    isScrolled ? 'text-gray-700' : 'text-white'
+                    navIsLight ? 'text-gray-700' : 'text-white'
                   }`}
                 >
                   {item.name}
@@ -78,7 +89,7 @@ export default function Navigation() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`md:hidden p-2 rounded-lg transition-colors z-50 ${
-                isScrolled || isOpen ? 'text-gray-900' : 'text-white'
+                navIsLight || isOpen ? 'text-gray-900' : 'text-white'
               }`}
               aria-label="Toggle menu"
             >
