@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && npm run cf:deploy",
     "start": "next start",
     "cf:preview": "npx wrangler pages dev out",
-    "cf:deploy": "npx wrangler pages deploy out",
+    "cf:deploy": "npx wrangler pages deploy out --project-name=seaviewcolombo",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
