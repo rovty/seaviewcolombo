@@ -7,7 +7,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { galleryImages } from '@/lib/data';
 
-const categories = ['All', 'Living Areas', 'Bedrooms', 'Ocean Views', 'Rooftop Pool', 'Building Facilities'];
+const categories = ['All', 'Living Areas', 'Bedrooms', 'Ocean Views', 'Rooftop Pool'];
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -41,8 +41,8 @@ export default function GalleryPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Ocean view photography"
+            src="/images/In-the-heart-of-clm/2.jpg"
+            alt="Gallery background"
             fill
             priority
             className="object-cover"
@@ -91,7 +91,6 @@ export default function GalleryPage() {
           >
             <AnimatePresence>
               {filteredImages.map((image, index) => {
-                const isLarge = index % 5 === 0;
                 return (
                   <motion.div
                     key={image.src}
@@ -100,10 +99,8 @@ export default function GalleryPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className={`relative group cursor-pointer overflow-hidden rounded-xl ${
-                      isLarge ? 'sm:col-span-2 lg:col-span-1 row-span-2' : ''
-                    }`}
-                    style={{ aspectRatio: isLarge ? '4/3' : '4/3' }}
+                    className="relative group cursor-pointer overflow-hidden rounded-xl"
+                    style={{ aspectRatio: '4/3' }}
                     onClick={() => openLightbox(index)}
                   >
                     <Image

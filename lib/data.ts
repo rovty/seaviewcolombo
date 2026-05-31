@@ -35,11 +35,19 @@ export const apartments: Apartment[] = [
     longDescription: 'This spectacular sea view apartment offers the ultimate Colombo luxury experience. Wake up to panoramic views of the Indian Ocean from your private balcony. The apartment features a spacious open-plan living area with floor-to-ceiling windows, a fully equipped modern kitchen, and three beautifully appointed bedrooms. Enjoy exclusive access to the rooftop swimming pool while taking in 360-degree views of the Colombo skyline and ocean.',
     amenities: ['Rooftop Swimming Pool', 'Ocean View Balcony', 'Fitness Centre', 'Air Conditioning', 'Free WiFi', 'Smart TV', 'Fully Equipped Kitchen', 'Washing Machine', 'Private Parking', '24/7 Security', 'Elevator Access'],
     images: [
-      'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      '/images/sea-view-apt/1.jpg',
+      '/images/sea-view-apt/2.jpg',
+      '/images/sea-view-apt/3.jpg',
+      '/images/sea-view-apt/4.jpg',
+      '/images/sea-view-apt/5.jpg',
+      '/images/sea-view-apt/6.jpg',
+      '/images/sea-view-apt/7.jpg',
+      '/images/sea-view-apt/8.jpg',
+      '/images/sea-view-apt/9.jpg',
+      '/images/sea-view-apt/10.jpg',
+      '/images/sea-view-apt/11.jpg',
+      '/images/sea-view-apt/12.jpg',
+      '/images/sea-view-apt/13.jpg',
     ],
     featured: true,
     mapUrl: 'https://maps.app.goo.gl/gDw2gCi8vC2hLeaK9?g_st=iw',
@@ -57,10 +65,19 @@ export const apartments: Apartment[] = [
     longDescription: 'Positioned perfectly to maximize ocean views, this luxurious 3-bedroom apartment puts you right next to the Indian Ocean. The open-concept living space is flooded with natural light, while the private balcony offers the perfect spot for morning coffee or evening cocktails. Guests enjoy access to the building\'s rooftop pool, providing a refreshing escape with spectacular sea views.',
     amenities: ['Rooftop Swimming Pool', 'Ocean View', 'Air Conditioning', 'Free WiFi', 'Smart TV', 'Fully Equipped Kitchen', 'Washing Machine', 'Private Parking', '24/7 Security', 'Elevator Access', 'Sea View Balcony'],
     images: [
-      'https://images.pexels.com/photos/2506991/pexels-photo-2506991.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      '/images/next-to-indian/1.jpg',
+      '/images/next-to-indian/2.jpg',
+      '/images/next-to-indian/3.jpg',
+      '/images/next-to-indian/4.jpg',
+      '/images/next-to-indian/5.jpg',
+      '/images/next-to-indian/6.jpg',
+      '/images/next-to-indian/7.jpg',
+      '/images/next-to-indian/8.jpg',
+      '/images/next-to-indian/9.jpg',
+      '/images/next-to-indian/10.jpg',
+      '/images/next-to-indian/11.jpg',
+      '/images/next-to-indian/12.jpg',
+      '/images/next-to-indian/13.jpg',
     ],
     featured: true,
     mapUrl: 'https://maps.app.goo.gl/1HSuXvgmZn3r4DBH7?g_st=iw',
@@ -78,10 +95,20 @@ export const apartments: Apartment[] = [
     longDescription: 'This lovely sea view apartment combines comfort with stunning vistas. The highlight is the private terrace where you can watch the sunset over the Indian Ocean. Inside, you\'ll find three comfortable bedrooms, a modern kitchen, and a cozy living area. Private parking ensures convenience, while the terrace provides an outdoor sanctuary for relaxation.',
     amenities: ['Sea View Terrace', 'Private Parking', 'Air Conditioning', 'Free WiFi', 'Smart TV', 'Fully Equipped Kitchen', 'Washing Machine', '24/7 Security', 'Elevator Access', 'Outdoor Furniture'],
     images: [
-      'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      '/images/lovely-sea-view-apt/1.jpg',
+      '/images/lovely-sea-view-apt/2.jpg',
+      '/images/lovely-sea-view-apt/3.jpg',
+      '/images/lovely-sea-view-apt/4.jpg',
+      '/images/lovely-sea-view-apt/5.jpg',
+      '/images/lovely-sea-view-apt/6.jpg',
+      '/images/lovely-sea-view-apt/7.jpg',
+      '/images/lovely-sea-view-apt/8.jpg',
+      '/images/lovely-sea-view-apt/9.jpg',
+      '/images/lovely-sea-view-apt/10.jpg',
+      '/images/lovely-sea-view-apt/11.jpg',
+      '/images/lovely-sea-view-apt/12.jpg',
+      '/images/lovely-sea-view-apt/13.jpg',
+      '/images/lovely-sea-view-apt/14.jpg',
     ],
     featured: true,
     mapUrl: 'https://maps.app.goo.gl/RUnEmFuJSBu5HJzQ7?g_st=iw',
@@ -99,10 +126,21 @@ export const apartments: Apartment[] = [
     longDescription: 'Located in the vibrant heart of Colombo, this modern 2-bedroom apartment offers the perfect blend of city convenience and coastal relaxation. Enjoy your private pool or work out in the fitness centre. The ocean view balcony provides a peaceful retreat, while Colombo\'s attractions, restaurants, and shopping are just steps away.',
     amenities: ['Private Pool', 'Fitness Centre', 'Ocean View Balcony', 'Air Conditioning', 'Free WiFi', 'Smart TV', 'Fully Equipped Kitchen', 'Washing Machine', 'Private Parking', '24/7 Security', 'City Center Location'],
     images: [
-      'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/2506991/pexels-photo-2506991.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      '/images/In-the-heart-of-clm/1.jpg',
+      '/images/In-the-heart-of-clm/2.jpg',
+      '/images/In-the-heart-of-clm/3.jpg',
+      '/images/In-the-heart-of-clm/4.jpg',
+      '/images/In-the-heart-of-clm/5.jpg',
+      '/images/In-the-heart-of-clm/6.jpg',
+      '/images/In-the-heart-of-clm/7.jpg',
+      '/images/In-the-heart-of-clm/8.jpg',
+      '/images/In-the-heart-of-clm/9.jpg',
+      '/images/In-the-heart-of-clm/10.jpg',
+      '/images/In-the-heart-of-clm/11.jpg',
+      '/images/In-the-heart-of-clm/12.jpg',
+      '/images/In-the-heart-of-clm/13.jpg',
+      '/images/In-the-heart-of-clm/14.jpg',
+      '/images/In-the-heart-of-clm/15.jpg',
     ],
     featured: true,
     mapUrl: 'https://maps.app.goo.gl/cBuJPGFYdUqodDCe7?g_st=iw',
@@ -115,37 +153,37 @@ export const attractions: Attraction[] = [
     name: 'One Galle Face',
     description: 'Premium shopping mall with international brands, dining, and entertainment overlooking the ocean.',
     distance: '5 min walk',
-    image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/one_galle_face.jpg',
   },
   {
     name: 'Colombo City Centre',
     description: 'Modern shopping complex featuring retail stores, food court, and cinema.',
     distance: '10 min walk',
-    image: 'https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/colombo-city-centre.jpg',
   },
   {
     name: 'Gangaramaya Temple',
     description: 'One of Sri Lanka\'s most important Buddhist temples with stunning architecture.',
     distance: '15 min walk',
-    image: 'https://images.pexels.com/photos/2387871/pexels-photo-2387871.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/gangarama_temple.jpg',
   },
   {
     name: 'Kollupitiya Beach',
     description: 'Beautiful sandy beach perfect for morning walks and sunset views.',
     distance: '2 min walk',
-    image: 'https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/kollupitiya_beach.jpg',
   },
   {
     name: 'National Art Gallery',
     description: 'Showcasing Sri Lankan art and contemporary exhibitions.',
     distance: '20 min walk',
-    image: 'https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/national_art_gallary.jpg',
   },
   {
     name: 'Colombo Town Hall',
     description: 'Historic colonial building and architectural landmark.',
     distance: '15 min walk',
-    image: 'https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/attraction-locations/colombo_town_hall.jpg',
   },
 ];
 
@@ -193,16 +231,78 @@ export const features = [
 ];
 
 export const galleryImages = [
-  { src: 'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Living Areas', alt: 'Modern living room with ocean view' },
-  { src: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Living Areas', alt: 'Spacious open-plan living space' },
-  { src: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Bedrooms', alt: 'Luxurious master bedroom' },
-  { src: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Bedrooms', alt: 'Comfortable guest bedroom' },
-  { src: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Ocean Views', alt: 'Sunset over Indian Ocean' },
-  { src: 'https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Ocean Views', alt: 'Stunning ocean panorama' },
-  { src: 'https://images.pexels.com/photos/2506991/pexels-photo-2506991.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Rooftop Pool', alt: 'Rooftop infinity pool' },
-  { src: 'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Rooftop Pool', alt: 'Pool with city view' },
-  { src: 'https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Building Facilities', alt: 'Building exterior' },
-  { src: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=800', category: 'Building Facilities', alt: 'Building entrance' },
+  // All local images from public/images subfolders
+    // Sea View Apt
+  // Sea View Apt
+  ...Array.from({length: 13}, (_, i) => {
+    const n = i + 1;
+    const livingAreasSeaView: number[] = [3, 5, 8, 13];
+    const bedroomsSeaView: number[] = [4, 9, 12];
+    const rooftopPoolSeaView: number[] = [];
+    const oceanViewsSeaView: number[] = [10];
+    let category = 'Sea View Apartment';
+    if (livingAreasSeaView.includes(n)) category = 'Living Areas';
+    if (bedroomsSeaView.includes(n)) category = 'Bedrooms';
+    if (rooftopPoolSeaView.includes(n)) category = 'Rooftop Pool';
+    if (oceanViewsSeaView.includes(n)) category = 'Ocean Views';
+    return {
+      src: `/images/sea-view-apt/${n}.jpg`,
+      category,
+      alt: `Sea View Apartment Image ${n}`
+    };
+  }),
+  // Next to Indian Ocean
+  ...Array.from({length: 13}, (_, i) => {
+    const n = i + 1;
+    const livingAreasNextToIndian: number[] = [6, 7, 8];
+    const bedroomsNextToIndian: number[] = [1, 5, 9, 10];
+    const rooftopPoolNextToIndian: number[] = [2, 3, 11];
+    let category = 'Next to Indian Ocean';
+    if (livingAreasNextToIndian.includes(n)) category = 'Living Areas';
+    if (bedroomsNextToIndian.includes(n)) category = 'Bedrooms';
+    if (rooftopPoolNextToIndian.includes(n)) category = 'Rooftop Pool';
+    return {
+      src: `/images/next-to-indian/${n}.jpg`,
+      category,
+      alt: `Next to Indian Ocean Image ${n}`
+    };
+  }),
+  // Lovely Sea View Apartment
+  ...Array.from({length: 14}, (_, i) => {
+    const n = i + 1;
+    const livingAreasLovely: number[] = [1, 4, 7, 14];
+    const bedroomsLovely: number[] = [3, 5, 6, 11];
+    const rooftopPoolLovely: number[] = [2];
+    const oceanViewsLovely: number[] = [8, 9];
+    let category = 'Lovely Sea View Apartment';
+    if (livingAreasLovely.includes(n)) category = 'Living Areas';
+    if (bedroomsLovely.includes(n)) category = 'Bedrooms';
+    if (rooftopPoolLovely.includes(n)) category = 'Rooftop Pool';
+    if (oceanViewsLovely.includes(n)) category = 'Ocean Views';
+    return {
+      src: `/images/lovely-sea-view-apt/${n}.jpg`,
+      category,
+      alt: `Lovely Sea View Apartment Image ${n}`
+    };
+  }),
+  // In The Heart Of Colombo
+  ...Array.from({length: 15}, (_, i) => {
+    const n = i + 1;
+    const livingAreasHeart: number[] = [1, 2, 4, 8];
+    const bedroomsHeart: number[] = [3, 6, 11];
+    const rooftopPoolHeart: number[] = [5];
+    const oceanViewsHeart: number[] = [13, 15];
+    let category = 'In The Heart Of Colombo';
+    if (livingAreasHeart.includes(n)) category = 'Living Areas';
+    if (bedroomsHeart.includes(n)) category = 'Bedrooms';
+    if (rooftopPoolHeart.includes(n)) category = 'Rooftop Pool';
+    if (oceanViewsHeart.includes(n)) category = 'Ocean Views';
+    return {
+      src: `/images/In-the-heart-of-clm/${n}.jpg`,
+      category,
+      alt: `In The Heart Of Colombo Image ${n}`
+    };
+  }),
 ];
 
 export const siteConfig = {

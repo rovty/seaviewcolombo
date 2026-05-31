@@ -75,8 +75,8 @@ export default function ContactPage() {
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920"
-              alt="Luxury apartment contact"
+              src="/images/attraction-locations/colombo3.jpg"
+              alt="Colombo 03 view"
               fill
               priority
               className="object-cover"
@@ -136,8 +136,8 @@ export default function ContactPage() {
       <section className="relative py-16 md:py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Luxury apartment contact"
+            src="/images/sea-view-apt/3.jpg"
+            alt="Contact Us"
             fill
             priority
             className="object-cover"

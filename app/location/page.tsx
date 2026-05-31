@@ -19,8 +19,8 @@ export default function LocationPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Colombo beach view"
+            src="/images/attraction-locations/colombo3.jpg"
+            alt="Colombo 03 view"
             fill
             priority
             className="object-cover"
@@ -240,7 +240,7 @@ export default function LocationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-64 lg:h-[400px] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/attraction-locations/colombo3.jpg"
                 alt="Colombo 03 neighborhood"
                 fill
                 className="object-cover"

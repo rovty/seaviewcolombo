@@ -302,8 +302,8 @@ export default function HomePage() {
       <section className="relative py-12 md:py-16 lg:py-20 xl:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Indian Ocean view"
+            src="/images/attraction-locations/colombo-ocean-view.webp"
+            alt="Colombo Ocean View"
             fill
             className="object-cover"
             sizes="100vw"
