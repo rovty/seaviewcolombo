@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, Clock, ArrowRight, Navigation } from 'lucide-react';
+import { MapPin, Clock, ArrowRight, Navigation, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { attractions, siteConfig } from '@/lib/data';
+import { apartments, attractions, siteConfig } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Location',
   description: 'Our apartments are perfectly located in Colombo 03, within walking distance of major attractions like Galle Face, shopping malls, temples, and beaches.',
 };
+
+const generalMapUrl = `https://www.google.com/maps/search/?api=1&query=${siteConfig.coordinates.lat},${siteConfig.coordinates.lng}`;
 
 export default function LocationPage() {
   return (
@@ -90,8 +92,96 @@ export default function LocationPage() {
         </div>
       </section>
 
-      {/* Nearby Attractions */}
+      {/* Apartment Locations */}
       <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find Each Apartment
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              The clearest way to show apartment locations is to give every listing its own Google Maps link. Guests can open the exact pin when it&apos;s available, or view the shared Colombo 03 area pin while exact links are still being added.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {apartments.map((apartment) => {
+              const mapUrl = apartment.mapUrl || generalMapUrl;
+              const hasExactMap = Boolean(apartment.mapUrl);
+
+              return (
+                <div
+                  key={apartment.id}
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-[220px,1fr]">
+                    <div className="relative h-52 sm:h-full min-h-[220px]">
+                      <Image
+                        src={apartment.images[0]}
+                        alt={apartment.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 220px"
+                      />
+                    </div>
+
+                    <div className="p-6">
+                      <div className="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600 mb-2">
+                            {hasExactMap ? 'Exact Location' : 'Area Location'}
+                          </p>
+                          <h3 className="font-serif text-2xl font-bold text-gray-900">
+                            {apartment.name}
+                          </h3>
+                        </div>
+                      </div>
+
+                      <p className="text-gray-600 mb-4">
+                        {apartment.locationNote}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {apartment.features.slice(0, 3).map((feature) => (
+                          <span
+                            key={feature}
+                            className="rounded-full bg-sky-50 px-3 py-1 text-sm text-sky-700"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button asChild className="bg-sky-600 hover:bg-sky-700">
+                          <a
+                            href={mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Navigation className="w-4 h-4 mr-2" />
+                            {hasExactMap ? 'Open Exact Map' : 'Open Area Map'}
+                          </a>
+                        </Button>
+
+                        <Button asChild variant="outline" className="border-sky-600 text-sky-700 hover:bg-sky-50">
+                          <Link href={`/apartments/${apartment.slug}`}>
+                            View Apartment
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Nearby Attractions */}
+      <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -11,6 +11,8 @@ export interface Apartment {
   amenities: string[];
   images: string[];
   featured: boolean;
+  mapUrl?: string;
+  locationNote?: string;
 }
 
 export interface Attraction {
@@ -40,6 +42,8 @@ export const apartments: Apartment[] = [
       'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260',
     ],
     featured: true,
+    mapUrl: 'https://maps.app.goo.gl/gDw2gCi8vC2hLeaK9?g_st=iw',
+    locationNote: 'Exact Google Maps place link available.',
   },
   {
     id: '2',
@@ -59,6 +63,8 @@ export const apartments: Apartment[] = [
       'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260',
     ],
     featured: true,
+    mapUrl: 'https://maps.app.goo.gl/1HSuXvgmZn3r4DBH7?g_st=iw',
+    locationNote: 'Exact Google Maps place link available.',
   },
   {
     id: '3',
@@ -78,6 +84,8 @@ export const apartments: Apartment[] = [
       'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260',
     ],
     featured: true,
+    mapUrl: 'https://maps.app.goo.gl/RUnEmFuJSBu5HJzQ7?g_st=iw',
+    locationNote: 'Exact Google Maps place link available.',
   },
   {
     id: '4',
@@ -97,6 +105,8 @@ export const apartments: Apartment[] = [
       'https://images.pexels.com/photos/2506991/pexels-photo-2506991.jpeg?auto=compress&cs=tinysrgb&w=1260',
     ],
     featured: true,
+    mapUrl: 'https://maps.app.goo.gl/cBuJPGFYdUqodDCe7?g_st=iw',
+    locationNote: 'Exact Google Maps place link available.',
   },
 ];
 
