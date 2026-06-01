@@ -323,7 +323,7 @@ export default function ContactPage() {
                       id="checkIn"
                       name="checkIn"
                       type="date"
-                      className="mt-1 h-10 md:h-11"
+                      className="mt-1 h-10 md:h-11 w-full appearance-none"
                     />
                   </div>
                   <div>
@@ -332,7 +332,7 @@ export default function ContactPage() {
                       id="checkOut"
                       name="checkOut"
                       type="date"
-                      className="mt-1 h-10 md:h-11"
+                      className="mt-1 h-10 md:h-11 w-full appearance-none"
                     />
                   </div>
                 </div>
