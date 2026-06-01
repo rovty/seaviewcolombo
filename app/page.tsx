@@ -42,14 +42,15 @@ export default function HomePage() {
       <section className="relative h-screen min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/images/sea-view-apt/8.jpg"
             alt="Luxury sea view apartment in Colombo"
             fill
             priority
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-sky-900/45 to-slate-950/60" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(255,255,255,0.18),transparent_42%),radial-gradient(circle_at_82%_18%,rgba(56,189,248,0.14),transparent_40%)]" />
         </div>
 
         <motion.div
@@ -58,10 +59,10 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
         >
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 text-balance leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 text-balance leading-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
             Stay Above the Indian Ocean
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 md:mb-8 max-w-2xl mx-auto px-2">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 mb-6 md:mb-8 max-w-2xl mx-auto px-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
             Experience premium sea view apartments in Colombo with rooftop pools, spacious accommodations, modern amenities, and breathtaking ocean views.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
