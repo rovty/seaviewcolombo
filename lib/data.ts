@@ -309,7 +309,7 @@ export const siteConfig = {
   name: 'Sea View Apartments Colombo',
   tagline: 'Luxury Sea View Apartments in the Heart of Colombo',
   url: 'https://seaviewapartmentscolombo.com',
-  email: 'Priyantha60@hotmail.com',
+  email: 'info@seaviewapartmentscolombo.com',
   phone: '+61 433 824 066',
   whatsappLink: 'https://wa.me/61433824066',
   address: 'Colombo 03, Sri Lanka',

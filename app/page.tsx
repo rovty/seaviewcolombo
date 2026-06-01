@@ -95,61 +95,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-12 md:py-16 lg:py-20 xl:py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="text-center mb-10 md:mb-12 lg:mb-16"
-          >
-            <motion.h2
-              variants={fadeInUp}
-              className="font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4"
-            >
-              Why Choose Sea View Apartments Colombo
-            </motion.h2>
-            <motion.p
-              variants={fadeInUp}
-              className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-4"
-            >
-              Experience luxury living with world-class amenities and unparalleled ocean views
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8"
-          >
-            {features.map((feature) => {
-              const IconComponent = featureIcons[feature.icon];
-              return (
-                <motion.div
-                  key={feature.title}
-                  variants={fadeInUp}
-                  className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                    <IconComponent className="w-5 h-5 md:w-5.5 md:h-5.5 lg:w-6 lg:h-6 text-sky-600" />
-                  </div>
-                  <h3 className="font-serif text-sm md:text-base lg:text-lg font-semibold text-gray-900 mb-1.5 md:mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-xs md:text-sm line-clamp-2">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Apartments Section */}
       <section className="py-12 md:py-16 lg:py-20 xl:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,6 +198,61 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </Link>
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 md:py-16 lg:py-20 xl:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-10 md:mb-12 lg:mb-16"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4"
+            >
+              Why Choose Sea View Apartments Colombo
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-4"
+            >
+              Experience luxury living with world-class amenities and unparalleled ocean views
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8"
+          >
+            {features.map((feature) => {
+              const IconComponent = featureIcons[feature.icon];
+              return (
+                <motion.div
+                  key={feature.title}
+                  variants={fadeInUp}
+                  className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                    <IconComponent className="w-5 h-5 md:w-5.5 md:h-5.5 lg:w-6 lg:h-6 text-sky-600" />
+                  </div>
+                  <h3 className="font-serif text-sm md:text-base lg:text-lg font-semibold text-gray-900 mb-1.5 md:mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs md:text-sm line-clamp-2">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
