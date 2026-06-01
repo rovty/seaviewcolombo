@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Star, BedDouble, Bath, Check, ArrowLeft, Phone, Mail, Heart, Share2 } from 'lucide-react';
+import { Star, BedDouble, Bath, Check, ArrowLeft, Phone, Mail, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { apartments, siteConfig } from '@/lib/data';
@@ -45,6 +45,8 @@ export default function ApartmentPage({ params }: ApartmentPageProps) {
   if (!apartment) {
     notFound();
   }
+
+  const apartmentMapUrl = apartment.mapUrl || `https://www.google.com/maps/search/?api=1&query=${siteConfig.coordinates.lat},${siteConfig.coordinates.lng}`;
 
   return (
     <div className="pt-20">
@@ -221,6 +223,12 @@ export default function ApartmentPage({ params }: ApartmentPageProps) {
                   <a href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(`Booking Inquiry: ${apartment.name}`)}`}>
                     <Mail className="w-5 h-5 mr-2" />
                     Send Email Inquiry
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="w-full border-sky-600 text-sky-600 hover:bg-sky-50 py-6">
+                  <a href={apartmentMapUrl} target="_blank" rel="noopener noreferrer">
+                    <Navigation className="w-5 h-5 mr-2" />
+                    View Exact Location
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full py-6">
