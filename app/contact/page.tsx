@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { siteConfig } from '@/lib/data';
+import { apartments, siteConfig } from '@/lib/data';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -339,12 +339,22 @@ export default function ContactPage() {
 
                 <div>
                   <Label htmlFor="property" className="text-sm md:text-base">Property Interested In</Label>
-                  <Input
+                  <select
                     id="property"
                     name="property"
-                    className="mt-1 h-10 md:h-11"
-                    placeholder="E.g., Spectacular Sea View 3 Bedrooms"
-                  />
+                    className="mt-1 h-10 md:h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select a property
+                    </option>
+                    {apartments.map((apartment) => (
+                      <option key={apartment.id} value={apartment.name}>
+                        {apartment.name}
+                      </option>
+                    ))}
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
                 </div>
 
                 <div>
