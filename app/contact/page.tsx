@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -339,22 +339,25 @@ export default function ContactPage() {
 
                 <div>
                   <Label htmlFor="property" className="text-sm md:text-base">Property Interested In</Label>
-                  <select
-                    id="property"
-                    name="property"
-                    className="mt-1 h-10 md:h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select a property
-                    </option>
-                    {apartments.map((apartment) => (
-                      <option key={apartment.id} value={apartment.name}>
-                        {apartment.name}
+                  <div className="relative mt-1">
+                    <select
+                      id="property"
+                      name="property"
+                      className="h-10 md:h-11 w-full appearance-none rounded-md border border-input bg-background px-3 pr-10 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select a property
                       </option>
-                    ))}
-                    <option value="Not sure yet">Not sure yet</option>
-                  </select>
+                      {apartments.map((apartment) => (
+                        <option key={apartment.id} value={apartment.name}>
+                          {apartment.name}
+                        </option>
+                      ))}
+                      <option value="Not sure yet">Not sure yet</option>
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+                  </div>
                 </div>
 
                 <div>
