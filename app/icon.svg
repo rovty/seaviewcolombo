@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sea View Colombo icon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#75d5ff" />
+      <stop offset="100%" stop-color="#e7f7ff" />
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a6aa1" />
+      <stop offset="100%" stop-color="#02395e" />
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="32" cy="32" r="30" />
+    </clipPath>
+  </defs>
+
+  <circle cx="32" cy="32" r="31" fill="#022d49" />
+  <g clip-path="url(#circleClip)">
+    <rect width="64" height="64" fill="url(#sky)" />
+    <circle cx="45" cy="19" r="7" fill="#ffd67a" />
+    <path d="M0 35h64v29H0z" fill="url(#sea)" />
+    <path d="M0 37c6 4 10 4 16 0s10-4 16 0 10 4 16 0 10-4 16 0v3c-6 4-10 4-16 0s-10-4-16 0-10 4-16 0-10-4-16 0z" fill="#7fd0f7" fill-opacity="0.72" />
+    <path d="M15 47h22l-6 6H9z" fill="#f4f8fb" />
+    <path d="M31 43l6 4H15l8-4z" fill="#ffffff" />
+  </g>
+</svg>
