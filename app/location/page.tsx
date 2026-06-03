@@ -19,7 +19,7 @@ export default function LocationPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/attraction-locations/colombo3.jpg"
+            src="/images/In-the-heart-of-clm/1.jpg"
             alt="Colombo 03 view"
             fill
             priority
@@ -39,7 +39,7 @@ export default function LocationPage() {
         </div>
       </section>
 
-      {/* Map Section */}
+      /* {/* Map Section */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -90,7 +90,7 @@ export default function LocationPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */
 
       {/* Apartment Locations */}
       <section className="py-16 lg:py-24 bg-gray-50">
