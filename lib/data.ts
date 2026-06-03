@@ -312,8 +312,8 @@ export const siteConfig = {
   email: 'info@seaviewapartmentscolombo.com',
   phone: '+61 433 824 066',
   whatsappLink: 'https://wa.me/61433824066',
-  address: 'Colombo 03, Sri Lanka',
-  coordinates: { lat: 6.9271, lng: 79.8612 },
+  address: '142/4 Galle road Kollupitya Steaurt, lane, Colombo 00300',
+  coordinates: { lat: 6.9151325, lng: 79.8477421 },
 };
 
 export const navigation = [
