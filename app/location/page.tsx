@@ -8,6 +8,14 @@ import { apartments, attractions, siteConfig } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'Location',
   description: 'Our apartments are perfectly located in Colombo 03, within walking distance of major attractions like Galle Face, shopping malls, temples, and beaches.',
+  alternates: {
+    canonical: '/location',
+  },
+  openGraph: {
+    title: `Location | ${siteConfig.name}`,
+    description: 'Our apartments are perfectly located in Colombo 03, within walking distance of major attractions like Galle Face, shopping malls, temples, and beaches.',
+    url: '/location',
+  },
 };
 
 const generalMapUrl = `https://www.google.com/maps/search/?api=1&query=${siteConfig.coordinates.lat},${siteConfig.coordinates.lng}`;

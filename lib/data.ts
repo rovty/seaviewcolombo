@@ -306,10 +306,10 @@ export const galleryImages = [
 ];
 
 export const siteConfig = {
-  name: 'Sea View Apartments Colombo',
-  tagline: 'Luxury Sea View Apartments in the Heart of Colombo',
-  url: 'https://seaviewapartmentscolombo.com',
-  email: 'info@seaviewapartmentscolombo.com',
+  name: 'Lovely Sea View Apartments Colombo',
+  tagline: 'Luxury sea view apartments in Colombo with rooftop pools, ocean views, and premium amenities.',
+  url: 'https://lovelyseaviewapartments.com',
+  email: 'info@lovelyseaviewapartments.com',
   phone: '+61 433 824 066',
   whatsappLink: 'https://wa.me/61433824066',
   address: '142/4 Galle road Kollupitya Steaurt, lane, Colombo 00300',

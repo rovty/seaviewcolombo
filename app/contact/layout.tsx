@@ -1,8 +1,17 @@
 import { Metadata } from 'next';
+import { siteConfig } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Contact Priyantha for booking inquiries. Reach us via WhatsApp at +61 433 824 066 or email at info@seaviewapartmentscolombo.com.',
+  title: 'Contact and Booking Enquiries',
+  description: `Contact Priyantha for booking inquiries. Reach us via WhatsApp at ${siteConfig.phone} or email at ${siteConfig.email}.`,
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: `Contact and Booking Enquiries | ${siteConfig.name}`,
+    description: `Contact Priyantha for booking inquiries. Reach us via WhatsApp at ${siteConfig.phone} or email at ${siteConfig.email}.`,
+    url: '/contact',
+  },
 };
 
 export default function ContactLayout({

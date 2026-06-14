@@ -8,6 +8,14 @@ import { apartments, siteConfig } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'Luxury Sea View Apartments in Colombo',
   description: 'Explore our collection of luxury sea view apartments in Colombo. Spacious 2 and 3 bedroom accommodations with rooftop pools and stunning ocean views.',
+  alternates: {
+    canonical: '/apartments',
+  },
+  openGraph: {
+    title: 'Luxury Sea View Apartments in Colombo',
+    description: 'Explore our collection of luxury sea view apartments in Colombo. Spacious 2 and 3 bedroom accommodations with rooftop pools and stunning ocean views.',
+    url: '/apartments',
+  },
 };
 
 export default function ApartmentsPage() {

@@ -19,11 +19,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: `${siteConfig.name} | Luxury Sea View Apartments in Colombo`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: 'Discover luxury sea view apartments in Colombo. Spacious 2 and 3 bedroom accommodations with rooftop pools, ocean views, modern amenities, and prime Colombo location.',
+  description: siteConfig.tagline,
   keywords: ['Colombo apartments', 'sea view apartments', 'luxury accommodation', 'Sri Lanka', 'ocean view', 'rooftop pool', 'Colombo 03'],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -33,21 +37,21 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Luxury Sea View Apartments in Colombo`,
-    description: 'Discover luxury sea view apartments in Colombo. Spacious 2 and 3 bedroom accommodations with rooftop pools, ocean views, modern amenities, and prime Colombo location.',
+    description: siteConfig.tagline,
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/sea-view-apt/8.jpg',
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${siteConfig.name} - Luxury sea view apartments in Colombo`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} | Luxury Sea View Apartments in Colombo`,
-    description: 'Discover luxury sea view apartments in Colombo with rooftop pools and ocean views.',
-    images: ['/og-image.jpg'],
+    description: siteConfig.tagline,
+    images: ['/images/sea-view-apt/8.jpg'],
   },
   robots: {
     index: true,
@@ -62,6 +66,26 @@ export const metadata: Metadata = {
   },
 };
 
+
+const businessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LodgingBusiness',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  address: siteConfig.address,
+  image: `${siteConfig.url}/images/sea-view-apt/8.jpg`,
+  description: siteConfig.tagline,
+  priceRange: '$$',
+  areaServed: 'Colombo, Sri Lanka',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: siteConfig.coordinates.lat,
+    longitude: siteConfig.coordinates.lng,
+  },
+  sameAs: [siteConfig.whatsappLink],
+};
 export default function RootLayout({
   children,
 }: {
@@ -70,6 +94,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+        />
         <Navigation />
         <main>{children}</main>
         <Footer />

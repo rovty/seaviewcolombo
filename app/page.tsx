@@ -216,7 +216,7 @@ export default function HomePage() {
               variants={fadeInUp}
               className="font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4"
             >
-              Why Choose Sea View Apartments Colombo
+              Why Choose {siteConfig.name}
             </motion.h2>
             <motion.p
               variants={fadeInUp}
